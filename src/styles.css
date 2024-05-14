@@ -1,0 +1,139 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #060202;
+  }
+  
+  .form {
+    margin-bottom: 20px;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #150707;
+  }
+  
+  .input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top:10px;
+  }
+  
+  /* Panels Container */
+.panels-container {
+    display: flex;
+  }
+  
+  .left-panel {
+    flex: 1;
+    margin-right: 20px; /* Add some space between containers */
+  }
+  
+  /* Repository List Container */
+  .right-panel {
+    flex: 2;
+  }
+  
+  /* Profile Information */
+  .profile-info {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .profile-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .profile-info p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  /* Repository List Container */
+.repo-container {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Repository List */
+  .repo-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Individual Repository Box */
+  .repo-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  /* Repository Name */
+  .repo-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0d1823;
+  }
+  
+  /* View Button */
+  .view-button {
+    padding: 8px 16px;
+    background-color: #f6af45;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  /* Repository Description */
+  .repo-description {
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+  }
+  

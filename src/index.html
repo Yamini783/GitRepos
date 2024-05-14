@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>GitRepos</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div ng-controller="UserReposController as vm" class="container">
+    <!-- Search Form (Static) -->
+    <form ng-submit="vm.searchRepos()" class="form">
+      <label for="username" class="label">Enter GitHub Username:</label>
+      <input type="text" id="username" ng-model="vm.username" placeholder="Enter username" class="input" required>
+      <button type="submit" class="button">Search Repos</button>
+    </form>
+  
+    <!-- Profile Information Container -->
+    <div class="left-panel" ng-if="vm.profile.login">
+      <div class="profile-info">
+        <h3>{{ vm.profile.login }}</h3>
+        <img ng-src="{{ vm.profile.avatar_url }}" alt="Profile Picture" class="profile-pic">
+        <p>Followers: {{ vm.profile.followers }}</p>
+        <p>Following: {{ vm.profile.following }}</p>
+        <p>Public Repositories: {{ vm.profile.public_repos }}</p>
+      </div>
+    </div>
+  
+    <!-- Repository List Container -->
+    <div class="right-panel" ng-if="vm.repos.length > 0">
+      <div class="repo-container">
+        <ul class="repo-list">
+          <li ng-repeat="repo in vm.repos" class="repo-item">
+            <div class="repo-box">
+              <span class="repo-name">{{ repo.name }}</span>
+              <button class="view-button" ng-click="vm.openRepo(repo.html_url)">View on GitHub</button>
+              <p class="repo-description">{{ repo.description }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Include AngularJS library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <!-- Include your AngularJS application -->
+  <script src="app.js"></script>
+</body>
+</html>
