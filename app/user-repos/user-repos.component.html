@@ -1,0 +1,12 @@
+<div ng-app="myApp" ng-controller="UserReposController as vm">
+    <h2>Repositories of {{ vm.username }}</h2>
+    <input type="text" ng-model="vm.username" placeholder="Enter username">
+    <button ng-click="vm.searchRepos()">Search Repos</button>
+  
+    <ul>
+      <li ng-repeat="repo in vm.repos">
+        <a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a>
+      </li>
+    </ul>
+  </div>
+  
